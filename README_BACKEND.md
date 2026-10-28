@@ -1,13 +1,13 @@
 # AI-Generated Lattice Design and Property Prediction Backend
 ### Problem Statement 10 | AI Manthan 2.0 (Aerospace & Materials Science)
 
-A fully automated, verified scientific computing backend and REST API for generating, evaluating, and optimizing micro-architected cellular metamaterial lattices.
+A verified scientific computing backend and prototype REST API for generating, evaluating, and optimizing micro-architected cellular metamaterial lattices.
 
 ---
 
 ## Quick Start: How to Run in 3 Commands
 
-From the project root directory (`/Users/prashukjain/Desktop/ai mantham 1`):
+From the project root directory:
 
 ```bash
 # Command 1: Install verified runtime dependencies
@@ -16,11 +16,11 @@ pip install -r requirements.txt
 # Command 2: Execute the complete verified notebook top to bottom
 jupyter nbconvert --to notebook --execute lattice_backend.ipynb --output lattice_backend.ipynb
 
-# Command 3: Launch the interactive Jupyter environment (or inspect results)
+# Command 3: Launch the interactive Jupyter environment
 jupyter lab lattice_backend.ipynb
 ```
 
-*(Optional: To run the production FastAPI service directly from terminal, start it with `uvicorn` or execute the notebook cells in Section 13).*
+*(Optional: To run the prototype FastAPI service directly from terminal, execute the notebook cells in Section 13 or launch with `uvicorn`).*
 
 ---
 
@@ -28,45 +28,30 @@ jupyter lab lattice_backend.ipynb
 
 When evaluating the validity and performance of this backend, check these **3 critical numbers**:
 
-1. **Solver Physical Exactness (`Section 4c & 4i`):**
-   - **Number:** Simple Cubic $C_{11} - \rho/3 = 0.00 \times 10^0$ and Energy self-consistency error $= 1.89 \times 10^{-16}$.
-   - **Why:** Proves that the periodic homogenization finite-element formulation and fluctuation boundary conditions are mathematically exact to machine precision ($< 10^{-15}$).
-2. **Surrogate In-Distribution Accuracy (`Section 8` / `Table in VERIFICATION_REPORT.md`):**
-   - **Number:** **$1.58\%$** Mean in-distribution Median Absolute Percent Error across all 8 mechanical targets ($R^2 > 0.993$ for all moduli and strengths).
-   - **Why:** Confirms the ML surrogate can replace expensive numerical solves with sub-percent error for interactive design.
-3. **Candidate Optimization Throughput (`Section 11` / `data/benchmark.json`):**
-   - **Number:** **$2,000,193$ designs per second** during vectorized candidate scoring.
-   - **Why:** Enables true real-time multi-objective Pareto design exploration over 200,000 candidates in under $0.1$ seconds, delivering a $> 10,000\times$ speedup over full FE homogenization.
+1. **Analytical Solver Verification: diff = 0.00e+00 (Section 4 & 5)**  
+   The periodic homogenization solver matches the analytical beam solution for Simple Cubic ($C_{11} = \rho/3$, $yield\_z = \rho/3$, $buckle\_z = \pi \rho^2 / 36$) to within machine floating-point precision ($< 10^{-9}$).
+2. **Surrogate In-Distribution Accuracy: Mean MedAPE = 1.12% (Section 8)**  
+   Evaluated on a stratified 15% held-out test split of the full 6,400-sample dataset, the primary surrogate achieves a minimum $R^2$ of 0.9949 and mean median absolute percent error of 1.12% across all 8 mechanical targets.
+3. **Aerospace Core Mass Fraction: \rho = 0.0958 (90.4% Core Mass Saving) (Section 12)**  
+   In the realistic satellite sandwich-panel core design scenario ($G_{xz} \ge 400$ MPa, $\sigma_z \ge 30$ MPa in Ti-6Al-4V), the multi-objective genetic algorithm identified an optimal OCTET configuration with relative density $\rho = 0.0958$, reducing core mass by 90.4% compared to a solid titanium block of identical thickness (valid because flight requirements are below solid capacity).
 
 ---
 
-## Directory Structure and Deliverables
+## Key Capabilities & System Architecture
 
-```
-├── lattice_backend.ipynb     # Fully executed Jupyter notebook with all outputs and plots saved
-├── VERIFICATION_REPORT.md    # Rigorous validation report with real measured numbers and tests
-├── README_BACKEND.md         # Quick-start instructions and 3 key check numbers
-├── requirements.txt          # Python package requirements
-├── materials.json            # Verified aerospace and AM materials database (Ti-6Al-4V, AlSi10Mg, etc.)
-├── data/
-│   ├── lattice_dataset_v1.csv  # 800 verified simulation samples (Sobol generated, beam slenderness <= 0.15)
-│   ├── dataset_card.md         # Complete metadata, bounds, and solver verification card
-│   ├── benchmark.json          # Real measured timing, speedup, and throughput data
-│   └── selected_design_3d.json # 3D node/edge/radius export of optimal aerospace core
-└── models/
-    ├── hgb_models.joblib       # Trained HistGradientBoosting models (one per target)
-    ├── mlp_ensemble.joblib     # 5-seed MLPRegressor ensemble
-    ├── scalers.joblib          # Feature and target standard scalers
-    └── model_metadata.joblib   # Uncertainty thresholds, feature lists, and topology table
-```
+| Component | Scientific Method | Verification Benchmark |
+| :--- | :--- | :--- |
+| **Geometry Engine** | Parametric unit cells for 8 topologies with affine Voigt stiffness and geometric invariants | Strut counts, coordination numbers, and descriptor uniqueness rigorously verified |
+| **Physics Solver** | 3D Euler-Bernoulli beam elements with periodic microscopic boundary conditions | 10 of 10 automated verification checks passed (cantilever, symmetry, slopes) |
+| **Strength Model** | First-yield (von Mises) and Euler strut buckling under uniaxial compression | Simple Cubic exact analytical match to $< 10^{-9}$ |
+| **Surrogate AI** | Dual HistGradientBoosting + 5-Seed MLP Ensemble | In-distribution MedAPE = 1.12%, 200-sample fresh solver check MAPE = 3.12% |
+| **Inverse Optimizer** | Multi-Objective Genetic Algorithm with tournament selection & Pareto front extraction | Evaluated against baseline random search at 2,000 evaluations; diverse candidates with boundary flags |
+| **Prototype API** | FastAPI REST service with Pydantic validation and CAD JSON exports | 13 automated endpoint tests passed including error handling and solver fallback |
 
 ---
 
-## Core System Capabilities
+## Benchmark Scalability (relative to reduced-order beam solver)
 
-1. **8 Parametric Lattice Topologies:** Simple Cubic (SC), Body-Centered Cubic (BCC), Octet-truss, Diamond, BCC-Z, SC-BCC, SC-Octet, FCC-Face with anisotropic stretch ($s_z$) and strut tapering ($k$).
-2. **First-Principles Beam Solver:** 3D Euler-Bernoulli periodic homogenization with proper microscopic periodic boundary conditions and rigid-translation elimination.
-3. **First-Failure Mechanics:** Simultaneous computation of first plastic yielding (von Mises) and member elastic buckling (pinned-pinned Euler).
-4. **Multi-Objective Inverse Optimizer:** Vectorized 200,000-candidate Monte Carlo sampling, Pareto frontier extraction, and automatic real solver re-check.
-5. **Real-World Aerospace Case Study:** High-shear, crush-resistant satellite sandwich panel core using Ti-6Al-4V, achieving **92% mass reduction** vs. solid core.
-6. **Production FastAPI Service:** Complete REST API with `/health`, `/materials`, `/predict`, `/generate`, `/design`, `/validate`, and `/benchmark` endpoints.
+- **Single Solve:** Solver = 3.85 ms | Surrogate = 2.17 ms | Single-call speedup: 1.78x
+- **Batch Scaling:** Throughput reaches 1,485,580 designs/sec for batch size 1,000,000.
+- *Note:* The baseline solver is a reduced-order beam model; speedup is measured relative to that model.

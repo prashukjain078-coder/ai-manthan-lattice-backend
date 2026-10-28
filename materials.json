@@ -6,7 +6,9 @@
     "yield_MPa": 1.0,
     "density_kg_m3": 1.0,
     "source": "Normalized reference material with unit modulus and unit yield stress (Es=1.0)",
-    "verified": true
+    "verified": true,
+    "verification_status": "VERIFIED - definition (reference material)",
+    "notes": "bulk datasheet values; strut-scale properties of printed material differ (surface roughness, anisotropy, size effects)."
   },
   "Ti-6Al-4V": {
     "name": "Ti-6Al-4V",
@@ -14,8 +16,10 @@
     "poisson": 0.342,
     "yield_MPa": 880.0,
     "density_kg_m3": 4430.0,
-    "source": "MMPDS-01 (2003) / Boyer et al. Materials Properties Handbook: Titanium Alloys, ASM International (1994)",
-    "verified": true
+    "source": "citation unconfirmed",
+    "verified": false,
+    "verification_status": "UNVERIFIED - user must open the source and confirm",
+    "notes": "bulk datasheet values; strut-scale properties of printed material differ (surface roughness, anisotropy, size effects)."
   },
   "AlSi10Mg": {
     "name": "AlSi10Mg",
@@ -23,8 +27,10 @@
     "poisson": 0.33,
     "yield_MPa": 240.0,
     "density_kg_m3": 2680.0,
-    "source": "EOS GmbH AlSi10Mg Material Data Sheet / Kempen et al., Physics Procedia 39 (2012) 439-446",
-    "verified": true
+    "source": "citation unconfirmed",
+    "verified": false,
+    "verification_status": "UNVERIFIED - user must open the source and confirm",
+    "notes": "bulk datasheet values; strut-scale properties of printed material differ (surface roughness, anisotropy, size effects)."
   },
   "316L Stainless Steel": {
     "name": "316L Stainless Steel",
@@ -32,16 +38,21 @@
     "poisson": 0.30,
     "yield_MPa": 480.0,
     "density_kg_m3": 7950.0,
-    "source": "ASTM F3184-16 Standard Specification for Additive Manufacturing Stainless Steel / Wang et al., Nature Materials 17 (2018)",
-    "verified": true
+    "source": "citation unconfirmed",
+    "verified": false,
+    "verification_status": "UNVERIFIED - user must open the source and confirm",
+    "notes": "bulk datasheet values; strut-scale properties of printed material differ (surface roughness, anisotropy, size effects)."
   },
   "Printable Polymer (PA12)": {
     "name": "Printable Polymer (PA12)",
     "E_MPa": 1650.0,
     "poisson": 0.38,
     "yield_MPa": 48.0,
-    "density_kg_m3": 1010.0,
-    "source": "EOS PA 2200 Material Data Sheet / Caulfield et al., Rapid Prototyping Journal 13.5 (2007) 322-328",
-    "verified": true
+    "density_kg_m3": null,
+    "density_notes": "NEEDS CHECK against the EOS PA 2200 datasheet",
+    "source": "Caulfield, McHugh and Lohfeld (2007), Journal of Materials Processing Technology 182, pages 477-488",
+    "verified": false,
+    "verification_status": "UNVERIFIED - user must open the source and confirm",
+    "notes": "bulk datasheet values; strut-scale properties of printed material differ (surface roughness, anisotropy, size effects)."
   }
 }

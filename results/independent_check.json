@@ -1,0 +1,30 @@
+{
+  "check_a_affine_stiffness": {
+    "status": "PASS",
+    "sc_diff": 0.0,
+    "octet_rel_err_pct": 0.05626976975976576,
+    "bcc_solver_to_affine_ratio": 0.004133067808462821,
+    "diamond_solver_to_affine_ratio": 0.016509526236669153
+  },
+  "check_b_exact_simple_cubic": {
+    "status": "PASS",
+    "c11_diff": 0.0,
+    "exp_yield": 0.01,
+    "exp_buckle": 7.853981633974483e-05
+  },
+  "check_c_dataset_integrity": {
+    "status": "PASS",
+    "total_rows": 6400,
+    "no_nan": true,
+    "balanced_counts": true,
+    "upper_bound_satisfied": true,
+    "positive_stiffness": true,
+    "descriptors_unique": true
+  },
+  "check_d_round_trip": {
+    "status": "PASS",
+    "mean_ape_pct": 10.79419250414046,
+    "median_ape_pct": 5.365332717427021,
+    "sample_count": 20
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "dataset": {
+    "total_rows": 6400,
+    "samples_per_topology": 800,
+    "topologies_count": 8,
+    "failed_solves": 0,
+    "generation_time_s": 18.13,
+    "mode": "FULL",
+    "seed": 42,
+    "rho_range": [
+      0.02,
+      0.2999
+    ],
+    "sz_range": [
+      0.6001,
+      1.7998
+    ],
+    "k_range": [
+      0.6,
+      1.5998
+    ]
+  },
+  "solver_verification": {
+    "suite_tests_passed": 10,
+    "suite_tests_total": 10,
+    "cantilever_axial_error": 0.0,
+    "cantilever_bending_error": 1.7555016951205914e-16,
+    "scaling_slope_octet": 1.006,
+    "scaling_slope_bcc": 1.998,
+    "sc_analytical_c11_diff": 0.0,
+    "sc_analytical_yield_diff": 0.0,
+    "sc_analytical_buckle_diff": 0.0
+  },
+  "materials": {
+    "total_materials": 5,
+    "verified_materials": 1,
+    "unverified_materials": 4
+  },
+  "surrogate_in_distribution": {
+    "primary_model": "MLP_Ensemble",
+    "targets": [
+      "Ex",
+      "Ez",
+      "Gxy",
+      "Gxz",
+      "nu_xy",
+      "nu_xz",
+      "yield_z",
+      "buckle_z"
+    ],
+    "hgb_min_r2": 0.9949,
+    "hgb_mean_mape": 2.89,
+    "hgb_mean_medape": 1.12,
+    "mlp_min_r2": 0.9987,
+    "mlp_mean_mape": 1.71,
+    "mlp_mean_medape": 0.56,
+    "per_target_table": [
+      {
+        "Target": "Ex",
+        "HGB R2": 0.9973650332843443,
+        "HGB MedAPE (%)": 0.8590682151539487,
+        "HGB MAPE (%)": 1.6847745771013805,
+        "HGB MSPE (%)": -0.059027559394710424,
+        "MLP R2": 0.9992293596492828,
+        "MLP MedAPE (%)": 0.36972485255580456,
+        "MLP MAPE (%)": 0.741392687540765,
+        "MLP MSPE (%)": 0.002329375786243053
+      },
+      {
+        "Target": "Ez",
+        "HGB R2": 0.9975203313132253,
+        "HGB MedAPE (%)": 1.687788020661523,
+        "HGB MAPE (%)": 2.4238120232838636,
+        "HGB MSPE (%)": -0.27185448399034046,
+        "MLP R2": 0.9995203346195004,
+        "MLP MedAPE (%)": 0.649083555311139,
+        "MLP MAPE (%)": 1.043712999885087,
+        "MLP MSPE (%)": 0.1217086792090339
+      },
+      {
+        "Target": "Gxy",
+        "HGB R2": 0.9990467954919127,
+        "HGB MedAPE (%)": 0.5511303080245074,
+        "HGB MAPE (%)": 0.9326712555165132,
+        "HGB MSPE (%)": -0.024453218789838794,
+        "MLP R2": 0.9993979954859014,
+        "MLP MedAPE (%)": 0.31566113931890194,
+        "MLP MAPE (%)": 0.6197308317495966,
+        "MLP MSPE (%)": 0.19757379099541517
+      },
+      {
+        "Target": "Gxz",
+        "HGB R2": 0.9993348229390532,
+        "HGB MedAPE (%)": 0.46566955794024495,
+        "HGB MAPE (%)": 0.7856570449585508,
+        "HGB MSPE (%)": -0.02205408580274156,
+        "MLP R2": 0.9994699322636841,
+        "MLP MedAPE (%)": 0.32157197415759736,
+        "MLP MAPE (%)": 0.6128410888145341,
+        "MLP MSPE (%)": 0.06853080293531831
+      },
+      {
+        "Target": "nu_xy",
+        "HGB R2": 0.9987549259530182,
+        "HGB MedAPE (%)": 1.3126898462129453,
+        "HGB MAPE (%)": 4.035006947583576,
+        "HGB MSPE (%)": 0.46301915095675855,
+        "MLP R2": 0.999772472972563,
+        "MLP MedAPE (%)": 0.6955129788743291,
+        "MLP MAPE (%)": 3.0670670316776816,
+        "MLP MSPE (%)": -0.3313896224599778
+      },
+      {
+        "Target": "nu_xz",
+        "HGB R2": 0.9948547756036892,
+        "HGB MedAPE (%)": 2.048884989552138,
+        "HGB MAPE (%)": 10.08972180975018,
+        "HGB MSPE (%)": 4.949550804936097,
+        "MLP R2": 0.9988986736315297,
+        "MLP MedAPE (%)": 1.3501101646943066,
+        "MLP MAPE (%)": 6.245424930930422,
+        "MLP MSPE (%)": -0.010347734898901291
+      },
+      {
+        "Target": "yield_z",
+        "HGB R2": 0.9963386061859337,
+        "HGB MedAPE (%)": 1.9517122264548168,
+        "HGB MAPE (%)": 2.7738239807147824,
+        "HGB MSPE (%)": -0.09064417480085282,
+        "MLP R2": 0.9994972849070217,
+        "MLP MedAPE (%)": 0.7237225040035351,
+        "MLP MAPE (%)": 1.1038555507159675,
+        "MLP MSPE (%)": 0.401429614863279
+      },
+      {
+        "Target": "buckle_z",
+        "HGB R2": 0.9970858516188714,
+        "HGB MedAPE (%)": 0.07699589686271463,
+        "HGB MAPE (%)": 0.37511405317548374,
+        "HGB MSPE (%)": -0.0745392482423382,
+        "MLP R2": 0.9986512076551982,
+        "MLP MedAPE (%)": 0.03359275228900467,
+        "MLP MAPE (%)": 0.2172729830105749,
+        "MLP MSPE (%)": 0.08327022825960778
+      }
+    ]
+  },
+  "surrogate_held_out_topology": {
+    "base_features_mean_r2": -4.184,
+    "phys_features_mean_r2": -1.626,
+    "base_mean_medape": 273.49,
+    "phys_mean_medape": 151.27,
+    "loto_table": [
+      {
+        "Held-Out Topology": "sc",
+        "Base R2": -1.250466329093617,
+        "Base MedAPE (%)": 98.16868883755839,
+        "Base MAPE (%)": 97.58246479106914,
+        "Phys R2": -1.2681075273837292,
+        "Phys MedAPE (%)": 98.3089703899138,
+        "Phys MAPE (%)": 97.63433680284828
+      },
+      {
+        "Held-Out Topology": "bcc",
+        "Base R2": -26.046932275594394,
+        "Base MedAPE (%)": 1329.5927605852567,
+        "Base MAPE (%)": 1806.5372013354456,
+        "Phys R2": -14.571530870967532,
+        "Phys MedAPE (%)": 876.3218270235807,
+        "Phys MAPE (%)": 1213.5457473765166
+      },
+      {
+        "Held-Out Topology": "octet",
+        "Base R2": 0.9922753005631818,
+        "Base MedAPE (%)": 5.119410356088997,
+        "Base MAPE (%)": 6.300741138803327,
+        "Phys R2": 0.9909838154067215,
+        "Phys MedAPE (%)": 5.013897968350192,
+        "Phys MAPE (%)": 6.76830027232472
+      },
+      {
+        "Held-Out Topology": "diamond",
+        "Base R2": -8.515286588114813,
+        "Base MedAPE (%)": 551.5735696791231,
+        "Base MAPE (%)": 721.1527295442605,
+        "Phys R2": 0.18859525088306606,
+        "Phys MedAPE (%)": 61.69632723857394,
+        "Phys MAPE (%)": 103.06219685277004
+      },
+      {
+        "Held-Out Topology": "bcc_z",
+        "Base R2": -0.70173245040909,
+        "Base MedAPE (%)": 93.85761660140857,
+        "Base MAPE (%)": 91.66122188863041,
+        "Phys R2": -0.6472320994365324,
+        "Phys MedAPE (%)": 93.43125352556285,
+        "Phys MAPE (%)": 90.9387960575281
+      },
+      {
+        "Held-Out Topology": "sc_bcc",
+        "Base R2": 0.8500585577239498,
+        "Base MedAPE (%)": 22.85422392440413,
+        "Base MAPE (%)": 22.880631836633867,
+        "Phys R2": 0.9758324708445669,
+        "Phys MedAPE (%)": 6.684026759237269,
+        "Phys MAPE (%)": 8.137768819253555
+      },
+      {
+        "Held-Out Topology": "sc_octet",
+        "Base R2": 0.9329863171867944,
+        "Base MedAPE (%)": 20.197952086531455,
+        "Base MAPE (%)": 22.05426969711403,
+        "Phys R2": 0.9914462670451234,
+        "Phys MedAPE (%)": 5.147731275999499,
+        "Phys MAPE (%)": 7.335163082773407
+      },
+      {
+        "Held-Out Topology": "fcc_face",
+        "Base R2": 0.26775270728258105,
+        "Base MedAPE (%)": 66.56129675295725,
+        "Base MAPE (%)": 65.13551494406202,
+        "Phys R2": 0.3301150637704121,
+        "Phys MedAPE (%)": 63.51821853803704,
+        "Phys MAPE (%)": 62.878456242728845
+      }
+    ]
+  },
+  "surrogate_fresh_solver_check": {
+    "sample_count": 200,
+    "seed": 999,
+    "mean_mape": 3.12,
+    "median_mape": 1.52,
+    "gxz_mean_signed_error": -0.07,
+    "metrics_table": [
+      {
+        "Target": "Ex",
+        "Mean APE (%)": 1.4832930915400513,
+        "Median APE (%)": 0.717895497586441,
+        "Mean Signed PE (%)": 0.04560009178947237
+      },
+      {
+        "Target": "Ez",
+        "Mean APE (%)": 2.4180185921438833,
+        "Median APE (%)": 1.7855452388448096,
+        "Mean Signed PE (%)": -0.34347768659745964
+      },
+      {
+        "Target": "Gxy",
+        "Mean APE (%)": 1.0668710288546341,
+        "Median APE (%)": 0.6498164565700527,
+        "Mean Signed PE (%)": 0.10068103223793752
+      },
+      {
+        "Target": "Gxz",
+        "Mean APE (%)": 0.8137677631233597,
+        "Median APE (%)": 0.5408949157374652,
+        "Mean Signed PE (%)": -0.07191938964159504
+      },
+      {
+        "Target": "nu_xy",
+        "Mean APE (%)": 5.341091334553132,
+        "Median APE (%)": 1.2798541437501894,
+        "Mean Signed PE (%)": 1.280707450419836
+      },
+      {
+        "Target": "nu_xz",
+        "Mean APE (%)": 8.16778274344686,
+        "Median APE (%)": 1.8360864508215071,
+        "Mean Signed PE (%)": 1.444336394988509
+      },
+      {
+        "Target": "yield_z",
+        "Mean APE (%)": 2.5357408199017026,
+        "Median APE (%)": 2.095078177851919,
+        "Mean Signed PE (%)": -0.2837747020163949
+      },
+      {
+        "Target": "buckle_z",
+        "Mean APE (%)": 0.3379951386124859,
+        "Median APE (%)": 0.06654929722085995,
+        "Mean Signed PE (%)": -0.014115092928823035
+      },
+      {
+        "Target": "failure_strain_z (derived)",
+        "Mean APE (%)": 5.9468031377883515,
+        "Median APE (%)": 4.714741017223552,
+        "Mean Signed PE (%)": 0.08001184148130988
+      }
+    ]
+  },
+  "uncertainty": {
+    "threshold_90th": 0.067,
+    "pearson_correlation": 0.301,
+    "spearman_correlation": 0.245,
+    "assessment": "weak correlation; does not reliably rank point-wise test errors within distribution"
+  },
+  "optimizer": {
+    "ga_total_evaluations": 2000,
+    "ga_viable_candidates": 1669,
+    "ga_pareto_candidates": 263,
+    "ga_wall_time_s": 102.68,
+    "random_evaluations": 2000,
+    "random_viable_candidates": 13,
+    "random_min_rho": 0.1874,
+    "distinct_topologies_in_top_10": 2,
+    "boundary_flagged_count": 0,
+    "solver_recheck_mean_abs_err_ez": 2.79,
+    "solver_recheck_signed_err_ez": 0.9,
+    "solver_recheck_mean_abs_err_gxz": 2.01,
+    "solver_recheck_signed_err_gxz": -1.23,
+    "solver_recheck_mean_abs_err_strength": 3.05,
+    "solver_recheck_signed_err_strength": 1.16
+  },
+  "aerospace_sandwich_core": {
+    "chosen_topology": "octet",
+    "relative_density": 0.0958,
+    "sz": 1.4,
+    "k": 1.114,
+    "strut_diameter_mm": 0.85,
+    "apparent_density_kg_m3": 424.6,
+    "mass_saving_vs_solid_pct": 90.42,
+    "Gxz_MPa": 909.2,
+    "strength_z_MPa": 30.2,
+    "boundary_flag": false
+  },
+  "benchmarks": {
+    "solver_single_time_s": 0.003847,
+    "surrogate_single_time_s": 0.002167,
+    "single_call_speedup": 1.78,
+    "batch_results": [
+      {
+        "Batch Size": 1000,
+        "Elapsed Time (s)": 0.002498149871826172,
+        "Designs Per Second": 400296.2397404085,
+        "Surrogate Time per Design (s)": 2.498149871826172e-06,
+        "Speedup vs Beam Solver": 1539.8931093720175
+      },
+      {
+        "Batch Size": 10000,
+        "Elapsed Time (s)": 0.008706092834472656,
+        "Designs Per Second": 1148620.8785190054,
+        "Surrogate Time per Design (s)": 8.706092834472657e-07,
+        "Speedup vs Beam Solver": 4418.611019826925
+      },
+      {
+        "Batch Size": 100000,
+        "Elapsed Time (s)": 0.06696915626525879,
+        "Designs Per Second": 1493224.7257813585,
+        "Surrogate Time per Design (s)": 6.696915626525879e-07,
+        "Speedup vs Beam Solver": 5744.261968250804
+      },
+      {
+        "Batch Size": 1000000,
+        "Elapsed Time (s)": 0.673137903213501,
+        "Designs Per Second": 1485579.6935904042,
+        "Surrogate Time per Design (s)": 6.73137903213501e-07,
+        "Speedup vs Beam Solver": 5714.852417965215
+      }
+    ],
+    "baseline_description": "Reduced-order 3D Euler-Bernoulli beam periodic homogenization model (not solid FEA)"
+  }
+}

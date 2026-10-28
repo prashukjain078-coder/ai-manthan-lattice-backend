@@ -1,28 +1,45 @@
 {
-  "solver_single_time_sec": 0.007574796676635742,
-  "surrogate_single_time_sec": 0.008179903030395508,
-  "speedup_factor": 0.9260252411903582,
+  "solver_single_time_sec": 0.003846883773803711,
+  "surrogate_single_time_sec": 0.002167224884033203,
+  "single_call_speedup": 1.775027502750275,
   "throughput": [
     {
       "Batch Size": 1000,
-      "Elapsed Time (s)": 0.008126020431518555,
-      "Designs Per Second": 123061.4675938151
+      "Elapsed Time (s)": 0.002498149871826172,
+      "Designs Per Second": 400296.2397404085,
+      "Surrogate Time per Design (s)": 2.498149871826172e-06,
+      "Speedup vs Beam Solver": 1539.8931093720175
     },
     {
       "Batch Size": 10000,
-      "Elapsed Time (s)": 0.013722896575927734,
-      "Designs Per Second": 728709.1281837451
+      "Elapsed Time (s)": 0.008706092834472656,
+      "Designs Per Second": 1148620.8785190054,
+      "Surrogate Time per Design (s)": 8.706092834472657e-07,
+      "Speedup vs Beam Solver": 4418.611019826925
     },
     {
       "Batch Size": 100000,
-      "Elapsed Time (s)": 0.0664360523223877,
-      "Designs Per Second": 1505206.834306467
+      "Elapsed Time (s)": 0.06696915626525879,
+      "Designs Per Second": 1493224.7257813585,
+      "Surrogate Time per Design (s)": 6.696915626525879e-07,
+      "Speedup vs Beam Solver": 5744.261968250804
     },
     {
-      "Batch Size": 500000,
-      "Elapsed Time (s)": 0.2578129768371582,
-      "Designs Per Second": 1939390.352394146
+      "Batch Size": 1000000,
+      "Elapsed Time (s)": 0.673137903213501,
+      "Designs Per Second": 1485579.6935904042,
+      "Surrogate Time per Design (s)": 6.73137903213501e-07,
+      "Speedup vs Beam Solver": 5714.852417965215
     }
   ],
-  "extensibility_verified": true
+  "extensibility_verified": true,
+  "baseline_solver_type": "Reduced-order 3D Euler-Bernoulli beam periodic homogenization (not solid 3D FEA)",
+  "machine_environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "python_version": "3.14.6",
+    "numpy_version": "2.5.4",
+    "scipy_version": "1.18.1",
+    "pandas_version": "3.1.0"
+  }
 }
