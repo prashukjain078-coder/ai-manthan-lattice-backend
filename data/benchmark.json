@@ -1,27 +1,27 @@
 {
-  "solver_single_time_sec": 0.00384521484375,
-  "surrogate_single_time_sec": 0.002413034439086914,
-  "speedup_factor": 1.593518427032902,
+  "solver_single_time_sec": 0.007574796676635742,
+  "surrogate_single_time_sec": 0.008179903030395508,
+  "speedup_factor": 0.9260252411903582,
   "throughput": [
     {
       "Batch Size": 1000,
-      "Elapsed Time (s)": 0.0027191638946533203,
-      "Designs Per Second": 367760.1052170101
+      "Elapsed Time (s)": 0.008126020431518555,
+      "Designs Per Second": 123061.4675938151
     },
     {
       "Batch Size": 10000,
-      "Elapsed Time (s)": 0.009436845779418945,
-      "Designs Per Second": 1059676.1072231627
+      "Elapsed Time (s)": 0.013722896575927734,
+      "Designs Per Second": 728709.1281837451
     },
     {
       "Batch Size": 100000,
-      "Elapsed Time (s)": 0.06351304054260254,
-      "Designs Per Second": 1574479.8099049148
+      "Elapsed Time (s)": 0.0664360523223877,
+      "Designs Per Second": 1505206.834306467
     },
     {
       "Batch Size": 500000,
-      "Elapsed Time (s)": 0.2731010913848877,
-      "Designs Per Second": 1830823.8808732494
+      "Elapsed Time (s)": 0.2578129768371582,
+      "Designs Per Second": 1939390.352394146
     }
   ],
   "extensibility_verified": true
