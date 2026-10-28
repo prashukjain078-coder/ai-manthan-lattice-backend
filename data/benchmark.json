@@ -1,0 +1,28 @@
+{
+  "solver_single_time_sec": 0.00384521484375,
+  "surrogate_single_time_sec": 0.002413034439086914,
+  "speedup_factor": 1.593518427032902,
+  "throughput": [
+    {
+      "Batch Size": 1000,
+      "Elapsed Time (s)": 0.0027191638946533203,
+      "Designs Per Second": 367760.1052170101
+    },
+    {
+      "Batch Size": 10000,
+      "Elapsed Time (s)": 0.009436845779418945,
+      "Designs Per Second": 1059676.1072231627
+    },
+    {
+      "Batch Size": 100000,
+      "Elapsed Time (s)": 0.06351304054260254,
+      "Designs Per Second": 1574479.8099049148
+    },
+    {
+      "Batch Size": 500000,
+      "Elapsed Time (s)": 0.2731010913848877,
+      "Designs Per Second": 1830823.8808732494
+    }
+  ],
+  "extensibility_verified": true
+}

@@ -1,0 +1,15 @@
+# Python environment requirements for Lattice Backend
+# Generated based on verified running environment
+numpy>=2.0.0
+scipy>=1.14.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+matplotlib>=3.9.0
+joblib>=1.4.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+requests>=2.32.0
+pydantic>=2.8.0
+nbformat>=5.10.0
+nbconvert>=7.16.0
+ipykernel>=6.29.0
