@@ -1,0 +1,24 @@
+symbol,name,atomic_number,atomic_mass,density_g_cm3,crystal_structure_rt,youngs_modulus_gpa,melting_point_c,notes,source_id
+Al,Aluminum,13,26.981538,2.70,FCC,70.0,660.3,"Light structural base metal; high corrosion resistance and thermal conductivity.",SRC_NIST_ELEM
+Ti,Titanium,22,47.867,4.51,HCP,116.0,1668.0,"Hexagonal close-packed alpha phase at RT; high strength-to-weight ratio.",SRC_NIST_ELEM
+V,Vanadium,23,50.9415,6.00,BCC,128.0,1910.0,"Body-centered cubic; acts as beta-stabilizer in titanium alloys.",SRC_NIST_ELEM
+Cr,Chromium,24,51.9961,7.19,BCC,279.0,1907.0,"Essential for passivation layer in stainless steels and oxidation resistance in superalloys.",SRC_NIST_ELEM
+Mn,Manganese,25,54.938044,7.43,Complex cubic,198.0,1246.0,"Solid-solution strengthener and deoxidizer in steels and aluminum alloys.",SRC_NIST_ELEM
+Fe,Iron,26,55.845,7.87,BCC,211.0,1538.0,"Alpha-ferrite at RT; foundational base metal for steels and maraging alloys.",SRC_NIST_ELEM
+Co,Cobalt,27,58.933194,8.86,HCP,209.0,1495.0,"Epsilon-HCP at RT; matrix element for wear-resistant and medical implant alloys.",SRC_NIST_ELEM
+Ni,Nickel,28,58.6934,8.90,FCC,200.0,1455.0,"Face-centered cubic; matrix element for high-temperature aerospace superalloys.",SRC_NIST_ELEM
+Cu,Copper,29,63.546,8.96,FCC,130.0,1085.0,"High electrical and thermal conductivity; ductile FCC matrix.",SRC_NIST_ELEM
+Zn,Zinc,30,65.38,7.14,HCP,108.0,419.5,"Major precipitation alloying element in 7xxx aerospace aluminum.",SRC_NIST_ELEM
+Sc,Scandium,21,44.955908,2.99,HCP,74.0,1541.0,"Extremely potent grain refiner forming coherent Al3Sc precipitates in Scalmalloy.",SRC_NIST_ELEM
+Zr,Zirconium,40,91.224,6.52,HCP,68.0,1855.0,"Grain boundary strengthener and thermal stabilizer in advanced aluminum and refractory alloys.",SRC_NIST_ELEM
+Nb,Niobium,41,92.90637,8.57,BCC,105.0,2477.0,"Key precipitation former (gamma-double-prime Ni3Nb) in Inconel 718 superalloy.",SRC_NIST_ELEM
+Mo,Molybdenum,42,95.95,10.22,BCC,329.0,2623.0,"Enhances resistance to pitting corrosion in 316L and solid-solution strength in Ni superalloys.",SRC_NIST_ELEM
+Ta,Tantalum,73,180.94788,16.69,BCC,186.0,3017.0,"Refractory metal with extreme corrosion resistance and bio-compatibility.",SRC_NIST_ELEM
+W,Tungsten,74,183.84,19.25,BCC,411.0,3422.0,"Highest melting point of all metals; ultra-dense refractory metal.",SRC_NIST_ELEM
+Mg,Magnesium,12,24.305,1.74,HCP,45.0,650.0,"Lightest structural metal; alloying element in Scalmalloy and 5xxx/6xxx/7xxx Al.",SRC_NIST_ELEM
+Si,Silicon,14,28.085,2.33,Diamond cubic,130.0,1414.0,"Essential for fluidity and eutectic castability in additive AlSi10Mg powder.",SRC_NIST_ELEM
+Sn,Tin,50,118.71,7.31,Tetragonal,50.0,231.9,"Solid-solution alpha stabilizer in near-alpha and alpha+beta titanium alloys.",SRC_NIST_ELEM
+C,Carbon,6,12.011,2.26,Hexagonal,1050.0,3642.0,"Primary interstitial hardening element in steels; strictly controlled in 316L (<=0.03 wt%).",SRC_NIST_ELEM
+N,Nitrogen,7,14.007,null,Diatomic gas,null,-210.0,"Potent interstitial strengthener and austenite stabilizer in stainless steels.",SRC_NIST_ELEM
+O,Oxygen,8,15.999,null,Diatomic gas,null,-218.8,"Controlled interstitial element in titanium; strictly limited in Ti-6Al-4V ELI (<=0.13 wt%).",SRC_NIST_ELEM
+

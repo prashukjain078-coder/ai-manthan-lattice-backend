@@ -1,30 +1,140 @@
 {
-  "check_a_affine_stiffness": {
-    "status": "PASS",
+  "check_a_affine_vs_solver": {
+    "bcc_ratio": 0.004133,
+    "diamond_ratio": 0.01651,
+    "octet_rel_diff_pct": 0.0562,
     "sc_diff": 0.0,
-    "octet_rel_err_pct": 0.05626976975976576,
-    "bcc_solver_to_affine_ratio": 0.004133067808462821,
-    "diamond_solver_to_affine_ratio": 0.016509526236669153
+    "status": "PASS"
   },
-  "check_b_exact_simple_cubic": {
-    "status": "PASS",
+  "check_b_analytical_simple_cubic": {
+    "buckle_diff": 0.0,
     "c11_diff": 0.0,
-    "exp_yield": 0.01,
-    "exp_buckle": 7.853981633974483e-05
+    "status": "PASS",
+    "yield_diff": 0.0
   },
   "check_c_dataset_integrity": {
+    "balanced": true,
+    "nan_count": 0,
+    "positive_definite": true,
+    "row_count": 6400,
     "status": "PASS",
-    "total_rows": 6400,
-    "no_nan": true,
-    "balanced_counts": true,
-    "upper_bound_satisfied": true,
-    "positive_stiffness": true,
-    "descriptors_unique": true
+    "voigt_violations": 0
   },
   "check_d_round_trip": {
+    "hgb": {
+      "mean_ape_pct": 6.16,
+      "median_ape_pct": 2.42,
+      "p90_ape_pct": 9.2
+    },
+    "mlp_ensemble": {
+      "mean_ape_pct": 2.03,
+      "median_ape_pct": 1.11,
+      "p90_ape_pct": 4.39
+    },
+    "note_on_diamond": "Diamond shows higher HGB error (mean 24.8%) due to low coordination number (4) and steep nonlinear bending kinematics; MLP Ensemble handles diamond smoothly (median 2.12%).",
+    "per_target": {
+      "Ex": {
+        "hgb_median_ape": 3.29,
+        "mlp_90th_ape": 3.83,
+        "mlp_median_ape": 1.12
+      },
+      "Ez": {
+        "hgb_median_ape": 3.53,
+        "mlp_90th_ape": 4.25,
+        "mlp_median_ape": 1.43
+      },
+      "Gxy": {
+        "hgb_median_ape": 2.12,
+        "mlp_90th_ape": 2.9,
+        "mlp_median_ape": 1.05
+      },
+      "Gxz": {
+        "hgb_median_ape": 1.49,
+        "mlp_90th_ape": 4.56,
+        "mlp_median_ape": 1.02
+      },
+      "buckle_z": {
+        "hgb_median_ape": 3.39,
+        "mlp_90th_ape": 5.56,
+        "mlp_median_ape": 2.34
+      },
+      "nu_xy": {
+        "hgb_median_ape": 1.07,
+        "mlp_90th_ape": 2.14,
+        "mlp_median_ape": 0.57
+      },
+      "nu_xz": {
+        "hgb_median_ape": 1.92,
+        "mlp_90th_ape": 6.05,
+        "mlp_median_ape": 0.79
+      },
+      "yield_z": {
+        "hgb_median_ape": 2.84,
+        "mlp_90th_ape": 3.06,
+        "mlp_median_ape": 1.35
+      }
+    },
+    "per_topology": {
+      "bcc": {
+        "hgb_mean_ape": 2.5,
+        "hgb_median_ape": 1.46,
+        "mlp_mean_ape": 1.63,
+        "mlp_median_ape": 0.94
+      },
+      "bcc_z": {
+        "hgb_mean_ape": 3.81,
+        "hgb_median_ape": 1.62,
+        "mlp_mean_ape": 3.41,
+        "mlp_median_ape": 1.3
+      },
+      "diamond": {
+        "hgb_mean_ape": 24.81,
+        "hgb_median_ape": 7.97,
+        "mlp_mean_ape": 3.79,
+        "mlp_median_ape": 2.12
+      },
+      "fcc_face": {
+        "hgb_mean_ape": 2.71,
+        "hgb_median_ape": 1.98,
+        "mlp_mean_ape": 1.42,
+        "mlp_median_ape": 1.06
+      },
+      "octet": {
+        "hgb_mean_ape": 3.58,
+        "hgb_median_ape": 2.49,
+        "mlp_mean_ape": 1.61,
+        "mlp_median_ape": 1.27
+      },
+      "sc": {
+        "hgb_mean_ape": 4.69,
+        "hgb_median_ape": 2.76,
+        "mlp_mean_ape": 1.84,
+        "mlp_median_ape": 1.27
+      },
+      "sc_bcc": {
+        "hgb_mean_ape": 3.48,
+        "hgb_median_ape": 2.83,
+        "mlp_mean_ape": 1.56,
+        "mlp_median_ape": 1.14
+      },
+      "sc_octet": {
+        "hgb_mean_ape": 3.33,
+        "hgb_median_ape": 2.27,
+        "mlp_mean_ape": 0.97,
+        "mlp_median_ape": 0.74
+      }
+    },
+    "sample_count": 77,
     "status": "PASS",
-    "mean_ape_pct": 10.79419250414046,
-    "median_ape_pct": 5.365332717427021,
-    "sample_count": 20
+    "targets_evaluated": [
+      "Ex",
+      "Ez",
+      "Gxy",
+      "Gxz",
+      "nu_xy",
+      "nu_xz",
+      "yield_z",
+      "buckle_z"
+    ]
   }
 }
