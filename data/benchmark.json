@@ -1,35 +1,35 @@
 {
-  "solver_single_time_sec": 0.003846883773803711,
-  "surrogate_single_time_sec": 0.002167224884033203,
-  "single_call_speedup": 1.775027502750275,
+  "solver_single_time_sec": 0.005215883255004883,
+  "surrogate_single_time_sec": 0.005629777908325195,
+  "single_call_speedup": 0.9264811756235972,
   "throughput": [
     {
       "Batch Size": 1000,
-      "Elapsed Time (s)": 0.002498149871826172,
-      "Designs Per Second": 400296.2397404085,
-      "Surrogate Time per Design (s)": 2.498149871826172e-06,
-      "Speedup vs Beam Solver": 1539.8931093720175
+      "Elapsed Time (s)": 0.00640416145324707,
+      "Designs Per Second": 156148.46803916458,
+      "Surrogate Time per Design (s)": 6.4041614532470705e-06,
+      "Speedup vs Beam Solver": 814.4521797401437
     },
     {
       "Batch Size": 10000,
-      "Elapsed Time (s)": 0.008706092834472656,
-      "Designs Per Second": 1148620.8785190054,
-      "Surrogate Time per Design (s)": 8.706092834472657e-07,
-      "Speedup vs Beam Solver": 4418.611019826925
+      "Elapsed Time (s)": 0.014529943466186523,
+      "Designs Per Second": 688233.923502289,
+      "Surrogate Time per Design (s)": 1.4529943466186522e-06,
+      "Speedup vs Beam Solver": 3589.747797121901
     },
     {
       "Batch Size": 100000,
-      "Elapsed Time (s)": 0.06696915626525879,
-      "Designs Per Second": 1493224.7257813585,
-      "Surrogate Time per Design (s)": 6.696915626525879e-07,
-      "Speedup vs Beam Solver": 5744.261968250804
+      "Elapsed Time (s)": 0.08638477325439453,
+      "Designs Per Second": 1157611.4196133846,
+      "Surrogate Time per Design (s)": 8.638477325439453e-07,
+      "Speedup vs Beam Solver": 6037.966019363884
     },
     {
       "Batch Size": 1000000,
-      "Elapsed Time (s)": 0.673137903213501,
-      "Designs Per Second": 1485579.6935904042,
-      "Surrogate Time per Design (s)": 6.73137903213501e-07,
-      "Speedup vs Beam Solver": 5714.852417965215
+      "Elapsed Time (s)": 0.7426328659057617,
+      "Designs Per Second": 1346560.3879251117,
+      "Surrogate Time per Design (s)": 7.426328659057618e-07,
+      "Speedup vs Beam Solver": 7023.501779231469
     }
   ],
   "extensibility_verified": true,

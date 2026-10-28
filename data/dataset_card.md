@@ -21,4 +21,4 @@
   - `failure_strain_z`: failure_stress_z / Ez (linear first-failure strain)
 - **Random Seed:** 42 (reproducible Sobol quasi-random sequence)
 - **Failed Solves / Rejections:** 0
-- **Runtime:** 18.13 seconds (FULL mode)
+- **Runtime:** 18.11 seconds (FULL mode)

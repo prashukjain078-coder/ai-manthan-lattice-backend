@@ -52,6 +52,6 @@ When evaluating the validity and performance of this backend, check these **3 cr
 
 ## Benchmark Scalability (relative to reduced-order beam solver)
 
-- **Single Solve:** Solver = 3.85 ms | Surrogate = 2.17 ms | Single-call speedup: 1.78x
-- **Batch Scaling:** Throughput reaches 1,485,580 designs/sec for batch size 1,000,000.
+- **Single Solve:** Solver = 5.22 ms | Surrogate = 5.63 ms | Single-call speedup: 0.93x
+- **Batch Scaling:** Throughput reaches 1,346,560 designs/sec for batch size 1,000,000.
 - *Note:* The baseline solver is a reduced-order beam model; speedup is measured relative to that model.

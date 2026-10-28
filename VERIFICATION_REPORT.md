@@ -85,7 +85,7 @@ Surrogate models are **accurate inside the trained topology set, but unreliable 
 
 ## 5. Optimizer Comparison: Genetic Algorithm vs. Baseline Random Search
 Both optimization methods were executed with an identical surrogate evaluation budget of **2,000 evaluations**:
-- **GA Viable Candidates:** 1669 (263 on non-dominated Pareto front) | Wall Time: 102.68 s
+- **GA Viable Candidates:** 1669 (263 on non-dominated Pareto front) | Wall Time: 101.40 s
 - **Random Search Viable Candidates:** 13
 - **Best Relative Density Found:** GA $\rho = 0.0958$ vs Random Search $\rho = 0.1874$
 - **Diversity:** Top returned candidates represent 2 distinct topologies via farthest-point selection in normalized design space.
@@ -98,8 +98,8 @@ Both optimization methods were executed with an identical surrogate evaluation b
 ---
 
 ## 6. Benchmarks & Scalability
-- **Single Solve:** Beam Solver = 3.85 ms | Single Surrogate Call = 2.17 ms | Single-call speedup: 1.78x
-- **Batch Scaling:** Throughput scales from 400,296 designs/s at batch 1,000 to 1,485,580 designs/s at batch 1,000,000.
+- **Single Solve:** Beam Solver = 5.22 ms | Single Surrogate Call = 5.63 ms | Single-call speedup: 0.93x
+- **Batch Scaling:** Throughput scales from 156,148 designs/s at batch 1,000 to 1,346,560 designs/s at batch 1,000,000.
 - **Baseline Scope:** The baseline solver is a reduced-order beam homogenization model, not solid continuum 3D FEA.
 
 ---
